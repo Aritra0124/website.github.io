@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Metas -->
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
+   <!-- Site Metas -->
+   <title>Collabfuel</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- site icon -->
+   <link rel="icon" href="../static/images/favicon.png" type="image/png" />
+   <!-- Bootstrap core CSS -->
+   <link href="../static/css/bootstrap.css" rel="stylesheet">
+   <!-- FontAwesome Icons core CSS -->
+   <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+   <!-- Custom animate styles for this template -->
+   <link href="../static/css/animate.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+   <link href="../static/css/style.css" rel="stylesheet">
+   <!-- Responsive styles for this template -->
+   <link href="../static/css/responsive.css" rel="stylesheet">
+   <!-- Colors for this template -->
+   <link href="../static/css/colors.css" rel="stylesheet">
+   <!-- light box gallery -->
+   <link href="../static/css/ekko-lightbox.css" rel="stylesheet">
+
+
+
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+   </head>
+   <body id="inner_page">
+      <!-- header -->
+      <header class="header">
+
+        <div class="header_top_section">
+           <div class="container">
+              <div class="row">
+                   <div class="col-lg-3">
+                      <div class="full">
+                         <div class="logo">
+                            <a href="/"><img src="../static/images/favicon.png" alt="Collabfuel" /></a>
+                         </div>
+                      </div>
+                   </div>
+            </div>
+           </div>
+        </div>
+
+      </header>
+      <!-- end header -->
+
+      <!-- section -->
+      <section class="main_full inner_page">
+        <div class="container-fluid">
+          <div class="row">
+             <div class="full">
+                <h3>{{ c_name}}</h3>
+             </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+
+      <!-- section -->
+      <section class="layout_padding section">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text_align_center">
+                  <div class="full heading_s1">
+                     <!--h2>{{c_name}}</h2-->
+                  </div>
+                  <div class="full">
+                  <ul>
+
+                    {% if c_name == "Page Not Found" or c_name == "Error at displaying" %}
+                            <li><a><img src="../static/images/{{ image_name }}"></a></li>
+                    {% elif c_name == "Contact Us"%}
+                            <section class="layout_padding section">
+         <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                  <div class="contact_section margin_top_30">
+                     <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                           <div class="form_cont">
+                               <form action="/">
+                                  <fieldset>
+                                     <div class="field">
+                                        <input type="text" name="name" placeholder="Name">
+                                     </div>
+                                     <div class="field">
+                                        <input type="email" name="email" placeholder="Email">
+                                     </div>
+                                     <div class="field">
+                                        <input type="text" name="phone" placeholder="Phone">
+                                     </div>
+                                     <div class="field">
+                                        <textarea placeholder="Message"></textarea>
+                                     </div>
+                                     <div class="field center">
+                                       <button>Send</button>
+                                  </div></fieldset>
+                               </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+                    {% else %}
+                            <li><a><img src="../static/images/{{ image_name }}" style="width: 300px; width: 300px;"></a></li>
+                    {% endif %}
+
+                  </ul>
+                  <hr>
+
+                  </div>
+                        <p class="lead" style="justify-content: center; font-size: 35px"> Course Topic</p>
+
+
+               </div>
+                <ul class="list-unstyled">
+                        {% for topic in topics %}
+                            <li><h3 class="lead"><span >&#8226;</span><a>{{ topic }}</a></h3></li>
+                        {% endfor %}
+                     </ul>
+            </div>
+         <p class="lead"> For further query or course enrollment contact us</p>
+         </div>
+      </section>
+      <!-- end section -->
+
+
+
+    <!-- footer -->
+      <footer class="footer layout_padding">
+         <div class="container">
+            <div class="row">
+
+               <div class="col-md-4 col-sm-12">
+                  <a href="index.html"><img class="img-responsive" src="../static/images/favicon.png" alt="#" style="width: 50%"/></a>
+                  <div class="footer_link_heading">
+                     <div class="footer_menu margin_top_30">
+                     <ul>
+                        <li><a href="tel:8007617563">+91 8007 617 563</a></li>
+                         <li><a href="tel:7098464548">+91 7098 464 548</a></li>
+                        <li><a href="mailto:Digitechnovators@gmail.com">Digitechnovators@gmail.com</a></li>
+                        <li><a href="#">Kolkata, India</a></li>
+                     </ul>
+                  </div>
+                  </div>
+                   <hr>
+               </div>
+
+               <div class="col-md-8">
+                 <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                  <div class="footer_link_heading">
+                     <h3>FEATURED COURSES</h3>
+                  </div>
+                  <div class="footer_menu">
+                     <ul>
+                        <li><a href="#">AWS</a></li>
+                        <li><a href="#">Terraform</a></li>
+                        <li><a href="#">AI & ML</a></li>
+                        <li><a href="#">Selenium Testing</a></li>
+                         <li><a href="#">Python Programming</a></li>
+                         <li><a href="#">Network Security</a></li>
+                     </ul>
+                  </div>
+                        <hr>
+               </div>
+
+               <!--div class="col-md-4 col-sm-12">
+                  <div class="footer_link_heading">
+                     <h3>CATEGORIES</h3>
+                  </div>
+                  <div class="footer_menu">
+                    <ul>
+                       <li><a href="#">Arts & Design</a></li>
+                       <li><a href="#">Business</a></li>
+                       <li><a href="#">Computer</a></li>
+                       <li><a href="#">Data entery</a></li>
+                    </ul>
+                  </div>
+                   <hr>
+               </div-->
+
+               <div class="col-md-4 col-sm-12">
+                  <div class="footer_link_heading">
+                     <h3>USEFUL LINKS</h3>
+                  </div>
+                  <div class="footer_menu">
+                    <ul>
+                       <li><a href="#">Twitter</a></li>
+                       <li><a href="#">Facebook</a></li>
+                       <li><a href="#">Instagram</a></li>
+                       <li><a href="#">Github</a></li>
+                       <li><a href="#">Linkedin</a></li>
+                       <li><a href="//api.whatsapp.com/send?phone=918007 617 563text=Hi! Query regarding Collabfuel courses" target="_blank">Whatsapp</a></li>
+
+                    </ul>
+                  </div>
+                   <hr>
+               </div>
+                 </div>
+               </div>
+
+            </div>
+         </div>
+      </footer>
+      <div class="cpy">
+        <div class="container">
+           <div class="row">
+             <div class="col-md-12">
+               <p>Copyright 2020. All Rights Reserved.<!--a href="https://html.design/"--> <a>Collabfuel</a></p>
+             </div>
+           </div>
+        </div>
+      </div>
+      <!-- end footer -->
+      <!-- Core JavaScript
+         ================================================== -->
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/js/tether.min.js"></script>
+      <script src="../static/js/bootstrap.min.js"></script>
+      <script src="../static/js/parallax.js"></script>
+
+      <script src="../static/js/ekko-lightbox.js"></script>
+      <script src="../static/js/custom.js"></script>
+
+
+   </body>
+</html>
